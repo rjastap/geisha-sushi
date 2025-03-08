@@ -1,0 +1,172 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2 {
+    background: #e74c3c;
+    color: white;
+    margin: 25px 0 15px;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1.4rem;
+}
+
+h3 {
+    color: #2c3e50;
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+    padding-left: 10px;
+}
+
+.menu-item {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    width: 70%;
+}
+
+.item-price {
+    color: #e74c3c;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: right;
+    width: 30%;
+}
+
+.item-desc {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 15px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 480px) {
+    .item-name {
+        font-size: 1rem;
+    }
+    
+    .item-price {
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+        margin: 20px -15px 10px;
+        border-radius: 0;
+    }
+
+    .nav-links {
+        padding: 8px;
+    }
+
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilos para variantes de items */
+.item-variants {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.item-variants .item-header {
+    margin-bottom: 5px;
+}
+
+.item-variants .item-name {
+    font-size: 0.95rem;
+    color: #34495e;
+}
+
+/* Mejoras en la navegación */
+.nav-links a.active {
+    color: #e74c3c;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background-color: #e74c3c;
+}
+
+/* Estilos para subcategorías */
+h3 {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 25px 0 15px;
+    color: #2c3e50;
+    font-size: 1.1rem;
+} 

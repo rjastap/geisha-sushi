@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Completo - Geisha Sushi</title>
+    <style>
+        /* Estilos base (igual que antes) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h2 {
+            background: #e74c3c;
+            color: white;
+            margin: 25px 0 15px;
+            border-radius: 5px;
+            padding: 12px;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+            padding-left: 10px;
+        }
+
+        .menu-item {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            width: 70%;
+        }
+
+        .item-price {
+            color: #e74c3c;
+            font-weight: bold;
+            white-space: nowrap;
+            text-align: right;
+            width: 30%;
+        }
+
+        .item-desc {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px 15px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            .item-name {
+                font-size: 1rem;
+            }
+            
+            .item-price {
+                font-size: 0.9rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+                margin: 20px -15px 10px;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-fixed">
+        <div class="nav-links">
+            <a href="#entradas">Entradas</a>
+            <a href="#ensaladas">Ensaladas</a>
+            <a href="#tiraditos">Tiraditos</a>
+            <a href="#ceviches">Ceviches</a>
+            <a href="#tartare">Tartare</a>
+            <a href="#principal">Principal</a>
+            <a href="#sushi">Sushi</a>
+            <a href="#temaki">Temaki</a>
+            <a href="#postres">Postres</a>
+            <a href="#bebidas">Bebidas</a>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 60px;">
+        <h1>🍣 Menú Geisha Sushi Lounge</h1>
+
+        <!-- SECCIÓN ENTRADAS -->
+        <h2 id="entradas">ENTRADAS</h2>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">1. Edamame</span>
+                <span class="item-price">35.000 Gs</span>
+            </div>
+            <p class="item-desc">Porción de judías verdes de soja hervidas</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">2. Misoshiru</span>
+                <span class="item-price">25.000 Gs</span>
+            </div>
+            <p class="item-desc">Sopa tradicional japonesa con fume de pescado, wakame, tofu y cebolita de verdeo</p>
+        </div>
+
+        <!-- Continúa con todos los items de Entradas... -->
+
+        <!-- SECCIÓN ENSALADAS -->
+        <h2 id="ensaladas">ENSALADAS</h2>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">1. Ensalada Green</span>
+                <span class="item-price">90.000 Gs</span>
+            </div>
+            <p class="item-desc">Hongos Shiltak, mango, aguacate, cebolla marinada, lechuga morada, zanahoria, pepino con aderezo de Honey Mustard</p>
+        </div>
+
+        <!-- Continúa con todas las ensaladas... -->
+
+        <!-- SECCIÓN TIRADITOS -->
+        <h2 id="tiraditos">TIRADITOS</h2>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">1. Salmon</span>
+                <span class="item-price">140.000 Gs</span>
+            </div>
+            <p class="item-desc">Cortes de salmón (300gr) en láminas finas con salsa de mango o maracuyá</p>
+        </div>
+
+        <!-- Continúa con todos los tiraditos... -->
+
+        <!-- SECCIÓN SUSHI -->
+        <h2 id="sushi">SUSHI</h2>
+        <h3>NIGIRI SUSHI (2 PIEZAS)</h3>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">1. Atún</span>
+                <span class="item-price">30.000 GS</span>
+            </div>
+            <p class="item-desc">Láminas de atún crudo servidas sobre pequeños bloques ovalados de arroz</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">2. Salmón</span>
+                <span class="item-price">30.000 GS</span>
+            </div>
+            <p class="item-desc">Láminas de salmón crudo servidas sobre pequeños bloques ovalados de arroz</p>
+        </div>
+
+        <!-- Continúa con todo el sushi... -->
+
+        <!-- SECCIÓN TEMAKI -->
+        <h2 id="temaki">TEMAKI</h2>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">1. Gelsha</span>
+                <span class="item-price">70.000 GS</span>
+            </div>
+            <p class="item-desc">Trozos de salmón, aguacate, pepino, queso crema & cebollita de verdeo</p>
+        </div>
+
+        <!-- SECCIÓN POSTRES -->
+        <h2 id="postres">POSTRES</h2>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">1. Brownie</span>
+                <span class="item-price">35.000 GS</span>
+            </div>
+            <p class="item-desc">Acompañado con una bocha de helado de crema</p>
+        </div>
+
+        <!-- SECCIÓN BEBIDAS -->
+        <h2 id="bebidas">BEBIDAS</h2>
+        <h3>AGUAS</h3>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">Agua sin Gas</span>
+                <span class="item-price">8.000 GS</span>
+            </div>
+        </div>
+
+        <h3>CERVEZAS</h3>
+        <div class="menu-item">
+            <div class="item-header">
+                <span class="item-name">Corona 710cc</span>
+                <span class="item-price">30.000 GS</span>
+            </div>
+        </div>
+
+        <!-- Continúa con todas las bebidas... -->
+
+    </div>
+</body>
+</html>
