@@ -77,17 +77,26 @@ h3 {
 .nav-fixed {
     position: fixed;
     top: 0;
-    width: 100%;
-    background: white;
+    left: 0;
+    right: 0;
+    background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
+    width: 100%;
 }
 
 .nav-links {
     display: flex;
     overflow-x: auto;
-    padding: 10px;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 10px;
+    background: #fff;
+}
+
+.nav-links::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .nav-links a {
@@ -96,7 +105,7 @@ h3 {
     padding: 8px 15px;
     white-space: nowrap;
     font-size: 0.9rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -119,10 +128,18 @@ h3 {
         border-radius: 0;
     }
 
+    .nav-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
     .nav-links {
         padding: 8px;
     }
-
+    
     .nav-links a {
         padding: 6px 12px;
         font-size: 0.85rem;
