@@ -83,6 +83,167 @@ document.addEventListener('DOMContentLoaded', function() {
                 price: 35000,
                 description: 'Porción de judías verdes de soja hervidas',
                 category: 'entradas'
+            },
+            {
+                id: 2,
+                name: 'Misoshiru',
+                price: 25000,
+                description: 'Sopa tradicional japonesa con fume de pescado, wakame, tofu y cebolita de verdeo',
+                category: 'entradas'
+            },
+            {
+                id: 3,
+                name: 'Seafood Miso Soup',
+                price: 65000,
+                description: 'Sopa de salmón, atún y camarón, con repollo japonés, wakame y cebollita de verdeo',
+                category: 'entradas'
+            },
+            {
+                id: 4,
+                name: 'Salmon delights',
+                price: 50000,
+                description: 'Bocaditos de salmón acompañadas con salsa Tare (8)',
+                category: 'entradas'
+            },
+            {
+                id: 5,
+                name: 'Camarón Harumaki',
+                price: 65000,
+                description: 'Arrolladito primavera relleno de camarón y queso crema (3)',
+                category: 'entradas'
+            },
+            {
+                id: 6,
+                name: 'Salmon Harumaki',
+                price: 60000,
+                description: 'Arrolladito primavera relleno de salmón grille y queso crema (3)',
+                category: 'entradas'
+            },
+            {
+                id: 7,
+                name: 'Gyoza de Verduras',
+                price: 45000,
+                description: 'Empanaditas japonesas de verduras acompañadas con salsa gyoza (6)',
+                category: 'entradas'
+            },
+            {
+                id: 8,
+                name: 'Gyoza de Cerdo',
+                price: 55000,
+                description: 'Empanaditas japonesas de carne porcina acompañadas con salsa gyoza (6)',
+                category: 'entradas'
+            },
+            {
+                id: 9,
+                name: 'Gyoza de Camarón',
+                price: 65000,
+                description: 'Empanaditas japonesas de camarón acompañadas con salsa gyoza (6)',
+                category: 'entradas'
+            },
+            {
+                id: 10,
+                name: 'Camarón Tempura Fashion',
+                price: 135000,
+                description: 'Tempura de camarón envuelto en láminas de salmón y queso crema (8)',
+                category: 'entradas'
+            },
+            // Ensaladas
+            {
+                id: 11,
+                name: 'Ensalada Green',
+                price: 90000,
+                description: 'Hongos Shiitak, mango, aguacate, cebolla marinada, lechuga morada, zanahoria, pepino con aderezo de Honey Mustard',
+                category: 'ensaladas'
+            },
+            {
+                id: 12,
+                name: 'Ensalada de Salmon y Atún',
+                price: 110000,
+                description: 'Mango, pepino con aderezo de mayonesa wasabi',
+                category: 'ensaladas'
+            },
+            // Tiraditos
+            {
+                id: 13,
+                name: 'Tiradito de Salmon',
+                price: 140000,
+                description: 'Cortes de salmón (300gr) en láminas finas con salsa de mango o maracuyá',
+                category: 'tiraditos'
+            },
+            {
+                id: 14,
+                name: 'Tiradito de Atún',
+                price: 140000,
+                description: 'Cortes de atún (300gr) en láminas finas',
+                category: 'tiraditos'
+            },
+            // Ceviches
+            {
+                id: 15,
+                name: 'Ceviche Sensation',
+                price: 150000,
+                description: 'Cubos de salmón (400gr) en leche de tigre oriental',
+                category: 'ceviches'
+            },
+            {
+                id: 16,
+                name: 'Ceviche Maguro',
+                price: 150000,
+                description: 'Cubos de atún (400gr) con leche de tigre oriental',
+                category: 'ceviches'
+            },
+            // Platos Principales
+            {
+                id: 17,
+                name: 'Salmon Teppaniaki',
+                price: 130000,
+                description: 'Salmon grillado (300gr) en jengibre y ajo con salsa Teriyaki, acompañado de hongos Shiitake & verduras salteados en manteca con arroz blanco',
+                category: 'principal'
+            },
+            {
+                id: 18,
+                name: 'Arroz Frito con Salmon',
+                price: 85000,
+                description: 'Cebolla blanca y roja, cebollita de verdeo, repollo y zanahoria salteados en manteca con jengibre, ajo y aceite de sésamo',
+                category: 'principal'
+            },
+            // Sushi
+            {
+                id: 19,
+                name: 'Nigiri de Atún',
+                price: 30000,
+                description: 'Láminas de atún crudo servidas sobre pequeños bloques ovalados de arroz (2 piezas)',
+                category: 'sushi'
+            },
+            {
+                id: 20,
+                name: 'Nigiri de Salmón',
+                price: 30000,
+                description: 'Láminas de salmón crudo servidas sobre pequeños bloques ovalados de arroz (2 piezas)',
+                category: 'sushi'
+            },
+            // Postres
+            {
+                id: 21,
+                name: 'Brownie',
+                price: 35000,
+                description: 'Acompañado con una bocha de helado de crema',
+                category: 'postres'
+            },
+            // Bebidas
+            {
+                id: 22,
+                name: 'Agua sin Gas',
+                price: 8000,
+                description: '',
+                category: 'bebidas'
+            },
+            {
+                id: 23,
+                name: 'Corona 710cc',
+                price: 30000,
+                description: '',
+                category: 'bebidas'
             }
         ];
         renderMenuItems();
@@ -101,7 +262,8 @@ document.addEventListener('DOMContentLoaded', function() {
         div.className = 'menu-item';
         div.innerHTML = `
             <h3>${item.name}</h3>
-            <p>${item.description}</p>
+            <span class="category">${formatCategory(item.category)}</span>
+            <p class="description">${item.description || 'Sin descripción'}</p>
             <p class="price">${formatPrice(item.price)} Gs</p>
             <div class="menu-item-actions">
                 <button onclick="editItem(${item.id})">Editar</button>
@@ -109,6 +271,22 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         return div;
+    }
+
+    function formatCategory(category) {
+        const categories = {
+            'entradas': 'Entradas',
+            'ensaladas': 'Ensaladas',
+            'tiraditos': 'Tiraditos',
+            'ceviches': 'Ceviches',
+            'tartare': 'Tartare',
+            'principal': 'Principal',
+            'sushi': 'Sushi',
+            'temaki': 'Temaki',
+            'postres': 'Postres',
+            'bebidas': 'Bebidas'
+        };
+        return categories[category] || category;
     }
 
     function openModal(item = null) {

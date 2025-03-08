@@ -136,9 +136,40 @@ button:hover {
 
 .menu-item {
     background: var(--panel-bg);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: var(--border-radius);
     position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    padding-right: 6rem;
+    font-size: 1.1rem;
+}
+
+.menu-item .category {
+    display: inline-block;
+    background: rgba(255,215,0,0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .description {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
 }
 
 .menu-item-actions {
@@ -152,6 +183,13 @@ button:hover {
 .menu-item-actions button {
     padding: 0.5rem;
     font-size: 0.875rem;
+    background: rgba(255,255,255,0.1);
+    color: var(--text-color);
+}
+
+.menu-item-actions button:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
 }
 
 /* Modal */
